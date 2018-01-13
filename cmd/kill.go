@@ -9,9 +9,9 @@ import (
 )
 
 var killCmd = &cobra.Command {
-    Use: "kill",
+	Use: "kill",
 	Short: "Kill specified running emulated devices",
-    Run: func(cmd *cobra.Command, args []string) {
+	Run: func(cmd *cobra.Command, args []string) {
 		auto, _ := cmd.Flags().GetBool("auto")
 		var devices_to_be_killed []string
 
@@ -53,7 +53,7 @@ var killCmd = &cobra.Command {
 				color.Printf("%h[fgRed]%v%r\n", err)
 			}
 		}
-    },
+	},
 }
 
 func init() {

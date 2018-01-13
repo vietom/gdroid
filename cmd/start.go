@@ -31,9 +31,9 @@ func isRunning(running_emulated_devices []string, requested_avd string) bool {
 }
 
 var startCmd = &cobra.Command {
-    Use: "start",
+	Use: "start",
 	Short: "Start specified AVDs",
-    Run: func(cmd *cobra.Command, args []string) {
+	Run: func(cmd *cobra.Command, args []string) {
 		auto, _ := cmd.Flags().GetInt("auto")
 		avds := make(map[string]bool, 5)
 
@@ -82,7 +82,7 @@ var startCmd = &cobra.Command {
 				"-avd", avd,
 			).Start()
 		}
-    },
+	},
 }
 
 func init() {

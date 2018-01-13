@@ -42,9 +42,9 @@ func GetAVDs() []string{
 }
 
 var listCmd = &cobra.Command {
-    Use: "list",
+	Use: "list",
 	Short: "List available AVDs and running emulated devices",
-    Run: func(cmd *cobra.Command, args []string) {
+	Run: func(cmd *cobra.Command, args []string) {
 		color.Printf("%h[fgCyan]Available AVDs:%r\n")
 		available_avds := GetAVDs()
 		if len(available_avds) == 0 {
